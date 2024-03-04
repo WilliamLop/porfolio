@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.gradient{
+  @apply absolute  h-[31.35rem] rounded-full blur-[10rem] sm:w-[68.75rem]
+}
+
+@layer {
+  .timeline::before {
+    /* Crea una línea vertical en el centro de los elementos de la lista */
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background: #eeee;
+    }
+
+    .timeline > li {
+        /* Asegura que los elementos de la lista tienen posición relativa para que la línea vertical se posicione correctamente */
+        position: relative;
+    }
+
+}
+
+.borderBlack{
+  @apply border border-black/10;
+}
